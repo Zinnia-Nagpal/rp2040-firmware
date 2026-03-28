@@ -1,5 +1,7 @@
 # pico--telemetry
 
+In Progress
+
 Phase 1 — Bare metal 
   - Linker script + startup assembly
   - UART driver (MMIO, ring buffer, IRQ)
