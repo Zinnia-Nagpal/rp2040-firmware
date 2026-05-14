@@ -26,9 +26,9 @@ void uart_init(uint32_t baud){
    }
 
    void uart_getc(char* c){
-      
-  
-   }
+       while(UART0->FR & (1 << 4));  /* wait while RX FIFO empty */
+    *c = UART0->DR;
+    }
   void uart_write(const char* data){
    while(*data){
       uart_putchar(*data++);
