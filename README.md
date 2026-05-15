@@ -148,4 +148,21 @@ memory-mapped peripherals where the address is fixed, a macro is correct.
 UART0->IBRD = UART_CLK / (16 * baud);
 UART0->FBRD = ((UART_CLK % (16 * baud)) * 64) / (16 * baud);
 ```
-UART samples each bit 16 times for noise immunity
+UART_CLK = 125MHz (RP2040 peripheral clock default).
+UART samples each bit 16 times for noise immunity — hence divide by 16.
+
+**Initialization sequence:**
+1. Disable UART (CR bit 0)
+2. Wait for current transmission to finish (FR bit 3 BUSY)
+3. Flush FIFO (clear LCRH bit 4 FEN)
+4. Set baud rate (IBRD, FBRD)
+5. Set 8N1 + enable FIFO (LCRH bits 4, 5, 6)
+6. Enable UART + TX + RX (CR bits 0, 8, 9)
+
+## In Progress
+- Bootloader — UART DFU, CRC32 verification, flash routines from SRAM
+- 1-Wire DS18B20 temperature driver
+- Interrupt-driven UART with DMA ring buffer
+- FreeRTOS port — sensor, telemetry, watchdog tasks
+- Binary telemetry protocol with CRC16
+- Python host decoder and monitor
