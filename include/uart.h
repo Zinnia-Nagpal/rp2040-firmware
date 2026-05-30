@@ -19,7 +19,7 @@ typedef struct __attribute__((packed)) {
 } uart_registers;
 void uart_init(uint32_t baud);
 void uart_putchar(char c);
-void uart_getc(void);
+void uart_getc(char* c);
 void uart_write(const char* data);
 
 // static uart_registers* uart0 = (uart_registers*)0x40034000;

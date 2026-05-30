@@ -36,7 +36,7 @@ what the hardware is doing at every step.
 
 ### 1. Linker Script (`scripts/boot.ld`)
 Tells the linker exactly how to arrange compiled code in memory.
-
+ 
 **Memory regions:**
 - `FLASH` at `0x10000000` — RP2040 external flash, where code lives
 - `SRAM` at `0x20000000`, 264kB — runtime data, stack

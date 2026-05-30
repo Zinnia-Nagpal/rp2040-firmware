@@ -1,6 +1,6 @@
 MEMORY{
     rom    (rx)  : ORIGIN =  0x10000000, LENGTH = 0x00040000
-    sram   (rwx) : ORIGIN =  0x20000000, LENGTH = 264kB
+    sram   (rwx) : ORIGIN =  0x20000000, LENGTH = 264k
 }
 STACK_SIZE = 0x2000;
 SECTIONS {
@@ -15,7 +15,7 @@ SECTIONS {
         *(.rodata.*)
     }>rom 
      
-     _sidata = LOADADDR(.data) 
+     _sidata = LOADADDR(.data); 
       .data : {
         _sdata = . ;
         *(.data*)

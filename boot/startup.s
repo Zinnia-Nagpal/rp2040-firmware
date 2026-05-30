@@ -1,5 +1,5 @@
 
-.text
+
 .syntax unified
 .thumb
 
@@ -30,7 +30,7 @@ loop:
 
     LDR r0, =_sbss
     LDR r1, =_ebss
-    MOV r2, #0
+    MOVS r2, #0
     bss_loop:
      STR r2, [r0]
      ADDS r0, #4
@@ -39,4 +39,6 @@ loop:
 
      BL main
      deadloop:
-      B deadloop
+     B deadloop  
+
+     

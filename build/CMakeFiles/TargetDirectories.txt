@@ -1,0 +1,3 @@
+/home/zna233/rp2040-firmware/build/CMakeFiles/firmware.dir
+/home/zna233/rp2040-firmware/build/CMakeFiles/edit_cache.dir
+/home/zna233/rp2040-firmware/build/CMakeFiles/rebuild_cache.dir
