@@ -129,21 +129,21 @@ firmware/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/build
 .PHONY : firmware/fast
 
-boot/startup.o: boot/startup.s.o
-.PHONY : boot/startup.o
+boot/startup.obj: boot/startup.s.obj
+.PHONY : boot/startup.obj
 
 # target to build an object file
-boot/startup.s.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/boot/startup.s.o
-.PHONY : boot/startup.s.o
+boot/startup.s.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/boot/startup.s.obj
+.PHONY : boot/startup.s.obj
 
-src/main.o: src/main.c.o
-.PHONY : src/main.o
+src/main.obj: src/main.c.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/main.c.obj
+.PHONY : src/main.c.obj
 
 src/main.i: src/main.c.i
 .PHONY : src/main.i
@@ -161,30 +161,6 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/uart.o: src/uart.c.o
-.PHONY : src/uart.o
-
-# target to build an object file
-src/uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.o
-.PHONY : src/uart.c.o
-
-src/uart.i: src/uart.c.i
-.PHONY : src/uart.i
-
-# target to preprocess a source file
-src/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.i
-.PHONY : src/uart.c.i
-
-src/uart.s: src/uart.c.s
-.PHONY : src/uart.s
-
-# target to generate assembly for a file
-src/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.s
-.PHONY : src/uart.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,13 +170,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... firmware"
-	@echo "... boot/startup.o"
-	@echo "... src/main.o"
+	@echo "... boot/startup.obj"
+	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/uart.o"
-	@echo "... src/uart.i"
-	@echo "... src/uart.s"
 .PHONY : help
 
 

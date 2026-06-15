@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/zna233/rp2040-firmware/boot/startup.s" "/home/zna233/rp2040-firmware/build/CMakeFiles/firmware.dir/boot/startup.s.o"
+  "/home/zna233/rp2040-firmware/boot/startup.s" "/home/zna233/rp2040-firmware/build/CMakeFiles/firmware.dir/boot/startup.s.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -19,8 +19,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zna233/rp2040-firmware/src/main.c" "CMakeFiles/firmware.dir/src/main.c.o" "gcc" "CMakeFiles/firmware.dir/src/main.c.o.d"
-  "/home/zna233/rp2040-firmware/src/uart.c" "CMakeFiles/firmware.dir/src/uart.c.o" "gcc" "CMakeFiles/firmware.dir/src/uart.c.o.d"
+  "/home/zna233/rp2040-firmware/src/main.c" "CMakeFiles/firmware.dir/src/main.c.obj" "gcc" "CMakeFiles/firmware.dir/src/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -69,10 +69,10 @@ include CMakeFiles/firmware.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/firmware.dir/flags.make
 
-CMakeFiles/firmware.dir/boot/startup.s.o: CMakeFiles/firmware.dir/flags.make
-CMakeFiles/firmware.dir/boot/startup.s.o: /home/zna233/rp2040-firmware/boot/startup.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/firmware.dir/boot/startup.s.o"
-	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/firmware.dir/boot/startup.s.o -c /home/zna233/rp2040-firmware/boot/startup.s
+CMakeFiles/firmware.dir/boot/startup.s.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/boot/startup.s.obj: /home/zna233/rp2040-firmware/boot/startup.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/firmware.dir/boot/startup.s.obj"
+	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/firmware.dir/boot/startup.s.obj -c /home/zna233/rp2040-firmware/boot/startup.s
 
 CMakeFiles/firmware.dir/boot/startup.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/firmware.dir/boot/startup.s.i"
@@ -82,25 +82,11 @@ CMakeFiles/firmware.dir/boot/startup.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/firmware.dir/boot/startup.s.s"
 	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/zna233/rp2040-firmware/boot/startup.s -o CMakeFiles/firmware.dir/boot/startup.s.s
 
-CMakeFiles/firmware.dir/src/uart.c.o: CMakeFiles/firmware.dir/flags.make
-CMakeFiles/firmware.dir/src/uart.c.o: /home/zna233/rp2040-firmware/src/uart.c
-CMakeFiles/firmware.dir/src/uart.c.o: CMakeFiles/firmware.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/firmware.dir/src/uart.c.o"
-	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/src/uart.c.o -MF CMakeFiles/firmware.dir/src/uart.c.o.d -o CMakeFiles/firmware.dir/src/uart.c.o -c /home/zna233/rp2040-firmware/src/uart.c
-
-CMakeFiles/firmware.dir/src/uart.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.dir/src/uart.c.i"
-	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zna233/rp2040-firmware/src/uart.c > CMakeFiles/firmware.dir/src/uart.c.i
-
-CMakeFiles/firmware.dir/src/uart.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/src/uart.c.s"
-	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zna233/rp2040-firmware/src/uart.c -o CMakeFiles/firmware.dir/src/uart.c.s
-
-CMakeFiles/firmware.dir/src/main.c.o: CMakeFiles/firmware.dir/flags.make
-CMakeFiles/firmware.dir/src/main.c.o: /home/zna233/rp2040-firmware/src/main.c
-CMakeFiles/firmware.dir/src/main.c.o: CMakeFiles/firmware.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/firmware.dir/src/main.c.o"
-	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/src/main.c.o -MF CMakeFiles/firmware.dir/src/main.c.o.d -o CMakeFiles/firmware.dir/src/main.c.o -c /home/zna233/rp2040-firmware/src/main.c
+CMakeFiles/firmware.dir/src/main.c.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/src/main.c.obj: /home/zna233/rp2040-firmware/src/main.c
+CMakeFiles/firmware.dir/src/main.c.obj: CMakeFiles/firmware.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/firmware.dir/src/main.c.obj"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/src/main.c.obj -MF CMakeFiles/firmware.dir/src/main.c.obj.d -o CMakeFiles/firmware.dir/src/main.c.obj -c /home/zna233/rp2040-firmware/src/main.c
 
 CMakeFiles/firmware.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.dir/src/main.c.i"
@@ -112,19 +98,17 @@ CMakeFiles/firmware.dir/src/main.c.s: cmake_force
 
 # Object files for target firmware
 firmware_OBJECTS = \
-"CMakeFiles/firmware.dir/boot/startup.s.o" \
-"CMakeFiles/firmware.dir/src/uart.c.o" \
-"CMakeFiles/firmware.dir/src/main.c.o"
+"CMakeFiles/firmware.dir/boot/startup.s.obj" \
+"CMakeFiles/firmware.dir/src/main.c.obj"
 
 # External object files for target firmware
 firmware_EXTERNAL_OBJECTS =
 
-firmware: CMakeFiles/firmware.dir/boot/startup.s.o
-firmware: CMakeFiles/firmware.dir/src/uart.c.o
-firmware: CMakeFiles/firmware.dir/src/main.c.o
+firmware: CMakeFiles/firmware.dir/boot/startup.s.obj
+firmware: CMakeFiles/firmware.dir/src/main.c.obj
 firmware: CMakeFiles/firmware.dir/build.make
 firmware: CMakeFiles/firmware.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable firmware"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable firmware"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/firmware.dir/link.txt --verbose=$(VERBOSE)
 	arm-none-eabi-objcopy -O binary firmware firmware.bin
 

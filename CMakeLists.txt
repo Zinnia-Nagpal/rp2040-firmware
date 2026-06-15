@@ -30,7 +30,6 @@ set(LINKER_FLAGS -T${CMAKE_SOURCE_DIR}/scripts/boot.ld -nostdlib )
 
 set(SOURCES
     boot/startup.s
-    src/uart.c
     src/main.c
 )
 

@@ -1,8 +1,7 @@
 #include "uart.h"
+
 int main(void) {
-    uart_init(115200);
-    uart_write("Hello from RP2040\n");
-    while(1);
+    volatile int x = 0;
+    while(1) { x++; }
     return 0;
 }
-

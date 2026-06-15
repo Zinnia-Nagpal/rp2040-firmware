@@ -2,7 +2,10 @@
 #define UART_H
 
 #include <stdint.h>
-
+#define RESETS_BASE   0x4000c000
+#define RESETS_RESET ((volatile uint32_t *)(RESETS_BASE + 0x0))
+#define RESETS_RESET_DONE ((volatile uint32_t *)RESETS_BASE + 0x8)
+#define RESET_UART0_BIT (1 << 22)
 #define UART0 ((uart_registers *)0x40034000)
 #define UART1 ((uart_registers *)0x40038000)
 typedef struct __attribute__((packed)) {

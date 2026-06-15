@@ -1,41 +1,37 @@
-MEMORY{
-    rom    (rx)  : ORIGIN =  0x10000000, LENGTH = 0x00040000
-    sram   (rwx) : ORIGIN =  0x20000000, LENGTH = 264k
+
+MEMORY {
+    rom  (rx)  : ORIGIN = 0x10000100, LENGTH = 0x0003FF00
+    sram (rwx) : ORIGIN = 0x20000000, LENGTH = 264k
 }
 STACK_SIZE = 0x2000;
 SECTIONS {
-
-     .vector_table : {
-        . = ALIGN(4);
-        KEEP(*(.vector_table))
-        . = ALIGN(4);
+    .text : {
+        KEEP(*(.text*))
+        *(.rodata*)
     } > rom
-    .text :    { 
-       *(.text*)
-        *(.rodata.*)
-    }>rom 
-     
-     _sidata = LOADADDR(.data); 
-      .data : {
-        _sdata = . ;
-        *(.data*)
-        _edata = . ;
-    } > sram AT> rom
 
-    /* uninitialized globals: just zeroed out in SRAM at startup */
+    _sidata = LOADADDR(.data);
+    .data : {
+        . = ALIGN(4);
+        _sdata = .;
+        *(.data*)
+        . = ALIGN(4);
+        _edata = .;
+    } > sram AT > rom
+
     .bss : {
+        . = ALIGN(4);
         _sbss = .;
         *(.bss*)
-         *(COMMON)  /*  int foo; goes there, while static int foo; does not.*/
-         _ebss = . ;
+        *(COMMON)
+        . = ALIGN(4);
+        _ebss = .;
     } > sram
 
-    .STACK (NOLOAD) :
-    {
-        
+    .stack (NOLOAD) : {
         . = ALIGN(8);
         . = . + STACK_SIZE;
         . = ALIGN(8);
-       _stack_top = .;
+        _stack_top = .;
     } > sram
 }

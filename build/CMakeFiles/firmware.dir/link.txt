@@ -1,1 +1,1 @@
-arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -T/home/zna233/rp2040-firmware/scripts/boot.ld -nostdlib CMakeFiles/firmware.dir/boot/startup.s.o CMakeFiles/firmware.dir/src/uart.c.o CMakeFiles/firmware.dir/src/main.c.o -o firmware  -lgcc 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -T/home/zna233/rp2040-firmware/scripts/boot.ld -nostdlib CMakeFiles/firmware.dir/boot/startup.s.obj CMakeFiles/firmware.dir/src/main.c.obj -o firmware  -lgcc 

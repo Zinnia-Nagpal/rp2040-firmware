@@ -11,6 +11,8 @@ typedef enum{
    UART_NO_DATA,
 } uart_error;
 void uart_init(uint32_t baud){
+   *RESETS_RESET &= ~RESET_UART0_BIT;
+   while(!(*RESETS_RESET_DONE & RESET_UART0_BIT));
    /* Disable the uart*/
    UART0 -> CR &= ~(1 << 0);
    while(UART0 -> FR & (1 << 3));    /* wait for transmiision to finish*/
