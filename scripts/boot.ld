@@ -1,12 +1,19 @@
-
 MEMORY {
-    rom  (rx)  : ORIGIN = 0x10000100, LENGTH = 0x0003FF00
+    rom  (rx)  : ORIGIN = 0x10000000, LENGTH = 2048k
     sram (rwx) : ORIGIN = 0x20000000, LENGTH = 264k
 }
 STACK_SIZE = 0x2000;
 SECTIONS {
+    .boot2 : {
+        KEEP(*(.boot2))
+    } > rom
+
+    .vectors : {
+        KEEP(*(.vectors))
+    } > rom
+
     .text : {
-        KEEP(*(.text*))
+        *(.text*)
         *(.rodata*)
     } > rom
 

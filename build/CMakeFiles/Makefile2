@@ -81,12 +81,12 @@ clean: CMakeFiles/firmware.dir/clean
 CMakeFiles/firmware.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=1,2,3 "Built target firmware"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zna233/rp2040-firmware/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target firmware"
 .PHONY : CMakeFiles/firmware.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/firmware.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zna233/rp2040-firmware/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zna233/rp2040-firmware/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/firmware.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zna233/rp2040-firmware/build/CMakeFiles 0
 .PHONY : CMakeFiles/firmware.dir/rule

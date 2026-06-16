@@ -2,6 +2,10 @@
 .syntax unified
 .thumb
 
+.section .vectors
+.word _stack_top
+.word reset_handler
+
 .section .text
 .global reset_handler
 .thumb_func

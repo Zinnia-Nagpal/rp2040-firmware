@@ -6,5 +6,7 @@
 
 #IncludeRegexTransform: 
 
+/home/zna233/rp2040-firmware/boot/boot2.S
+
 /home/zna233/rp2040-firmware/boot/startup.s
 

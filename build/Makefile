@@ -129,6 +129,14 @@ firmware/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/build
 .PHONY : firmware/fast
 
+boot/boot2.obj: boot/boot2.S.obj
+.PHONY : boot/boot2.obj
+
+# target to build an object file
+boot/boot2.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/boot/boot2.S.obj
+.PHONY : boot/boot2.S.obj
+
 boot/startup.obj: boot/startup.s.obj
 .PHONY : boot/startup.obj
 
@@ -161,6 +169,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/uart.obj: src/uart.c.obj
+.PHONY : src/uart.obj
+
+# target to build an object file
+src/uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.obj
+.PHONY : src/uart.c.obj
+
+src/uart.i: src/uart.c.i
+.PHONY : src/uart.i
+
+# target to preprocess a source file
+src/uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.i
+.PHONY : src/uart.c.i
+
+src/uart.s: src/uart.c.s
+.PHONY : src/uart.s
+
+# target to generate assembly for a file
+src/uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.dir/build.make CMakeFiles/firmware.dir/src/uart.c.s
+.PHONY : src/uart.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,10 +202,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... firmware"
+	@echo "... boot/boot2.obj"
 	@echo "... boot/startup.obj"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/uart.obj"
+	@echo "... src/uart.i"
+	@echo "... src/uart.s"
 .PHONY : help
 
 

@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/firmware.dir/boot/boot2.S.obj"
   "CMakeFiles/firmware.dir/boot/startup.s.obj"
   "CMakeFiles/firmware.dir/src/main.c.obj"
   "CMakeFiles/firmware.dir/src/main.c.obj.d"
+  "CMakeFiles/firmware.dir/src/uart.c.obj"
+  "CMakeFiles/firmware.dir/src/uart.c.obj.d"
   "firmware"
   "firmware.pdb"
 )
